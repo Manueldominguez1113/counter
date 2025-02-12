@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Counter",
+  "version": "0.5",
+  "description": "quickly add to counter with a shortcut command to keep track of things",
+  "permissions": ["storage", "commands", "notifications"],
+  "background": {
+    "service_worker" : "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "shortcut add to Counter"
+  },
+  "commands": {
+    "increment_counter":{
+      "suggested_key": {
+        "default": "Alt+1"
+      },
+      "description": "increment the counter"
+    },
+    "decrement_counter": {
+      "suggested_key" : {
+        "default": "Alt+2"
+      },
+      "description": "decrement the counter"
+    },
+    "reset_counter": {
+      "suggested_key" : {
+        "default": "Alt+3"
+      },
+      "description": "reset the counter"
+    }
+  }
+
+}
